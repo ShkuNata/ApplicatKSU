@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Blue_Alice"
+    tools:context=".zayavlenie.ObrazovanieFragment">
+
+    <Spinner
+        android:id="@+id/uroven_obrazovania"
+        android:layout_width="363dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/ubuntu_light"
+        android:minHeight="45dp"
+        android:popupBackground="@color/Blue_Alice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/numbers_obrazovania"
+        android:layout_width="363dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uroven_obrazovania">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nubmer_obrazovaniaLayout"
+            android:layout_width="175dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="13sp"
+            android:hint="№ документа"
+            android:textColorHint="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/uroven_obrazovania">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nubmer_obrazovaniaET"
+                android:layout_width="175dp"
+                android:layout_height="48dp"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/seriy_obrazovaniaLayout"
+            android:layout_width="175dp"
+            android:layout_height="48dp"
+            android:hint="Серия документа"
+            android:textColorHint="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/uroven_obrazovania">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/seriy_obrazovaniaET"
+                android:layout_width="175dp"
+                android:layout_height="48dp"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name_obrazovaniaLayout"
+        android:layout_width="363dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="24dp"
+        android:hint="Наименование образовательного учерждения"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/numbers_obrazovania">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name_obrazovaniaET"
+            android:layout_width="363dp"
+            android:layout_height="48dp"
+            android:inputType="textCapWords" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:id="@+id/date_bal_obrazovania"
+        android:layout_width="363dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_obrazovaniaLayout">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/date_vidachiLayout"
+            android:layout_width="175dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="13sp"
+            android:hint="Дата выдачи"
+            android:textColorHint="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/name_obrazovaniaLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/date_vidachiET"
+                android:layout_width="175dp"
+                android:layout_height="48dp"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/sredniy_balLayout"
+            android:layout_width="175dp"
+            android:layout_height="48dp"
+            android:hint="Средний балл"
+            android:textColorHint="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/name_obrazovaniaLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/sredniy_ballET"
+                android:layout_width="175dp"
+                android:layout_height="48dp"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveBtn"
+        android:layout_width="363dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/azure"
+        android:fontFamily="@font/ubuntu_light"
+        android:text="Сохранить"
+        android:textColor="@color/white"
+        android:textColorHint="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/date_bal_obrazovania"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

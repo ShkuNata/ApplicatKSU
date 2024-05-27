@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "226905014963",
+    "firebase_url": "https://applicantksu-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "applicantksu",
+    "storage_bucket": "applicantksu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226905014963:android:94f6f337aa21d6aa7ba6c6",
+        "android_client_info": {
+          "package_name": "com.example.applicatksu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDodPRfJwztCSDGQfggIXTgr_fiYuRYTuQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

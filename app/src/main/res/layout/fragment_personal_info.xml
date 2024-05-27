@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Blue_Alice"
+        android:orientation="vertical"
+        tools:context=".zayavlenie.Personal_infoFragment">
+
+        <TextView
+                android:id="@+id/pasport_da_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="Паспортные данные"
+                android:textSize="15sp" />
+
+
+            <LinearLayout
+                android:id="@+id/numbers_pasport"
+                android:layout_width="363dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="24dp"
+
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/number_pasportLayout"
+                    android:layout_width="175dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="13sp"
+                    android:hint="Номер"
+                    android:textColorHint="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/pasport_da_title">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/number_pasportET"
+                        android:layout_width="175dp"
+                        android:layout_height="48dp"
+                        android:inputType="number"  />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/seriya_pasportLayout"
+                    android:layout_width="175dp"
+                    android:layout_height="48dp"
+                    android:hint="Серия"
+                    android:textColorHint="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/pasport_da_title">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/seriya_pasportET"
+                        android:layout_width="175dp"
+                        android:layout_height="48dp"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/vydan_pasportLayout"
+            android:layout_width="363dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp"
+            android:hint="Кем выдан"
+            android:textColorHint="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/numbers_pasport">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/vydan_pasportET"
+                android:layout_width="363dp"
+                android:layout_height="48dp"
+                android:inputType="textCapCharacters" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/date_kod_pasport"
+            android:layout_width="363dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/date_pasportLayout"
+                android:layout_width="175dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="13sp"
+                android:hint="Дата выдачи"
+                android:textColorHint="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/pasport_da_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/date_pasportET"
+                    android:layout_width="175dp"
+                    android:layout_height="48dp"
+                    android:inputType="number"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/kod_pasportLayout"
+                android:layout_width="175dp"
+                android:layout_height="48dp"
+                android:hint="Код подразд-ния"
+                android:textColorHint="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/pasport_da_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/kod_pasportET"
+                    android:layout_width="175dp"
+                    android:layout_height="48dp"
+                    android:inputType="number|text"
+                    android:digits="0123456789-" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+            <TextView
+                android:id="@+id/adress_propiski_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="Адрес прописки"
+                android:textSize="15sp" />
+
+        <Spinner
+            android:layout_width="363dp"
+            android:layout_height="48dp"
+            android:id="@+id/oblast_propiska"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/ubuntu_light"
+            android:minHeight="45dp"
+            android:popupBackground="@color/Blue_Alice"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/gorod_propiskaLayout"
+            android:layout_width="363dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp"
+            android:hint="Населенный пункт"
+            android:textColorHint="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/oblast_propiska">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/gorod_propiskaET"
+                android:layout_width="363dp"
+                android:layout_height="48dp"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/strit_propiskaLayout"
+            android:layout_width="363dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp"
+            android:hint="Улица"
+            android:textColorHint="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/oblast_propiska">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/strit_propiskaET"
+                android:layout_width="363dp"
+                android:layout_height="48dp"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/number_propiska"
+                android:layout_width="363dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/number_dom_propiskaLayout"
+                    android:layout_width="121dp"
+                    android:layout_height="48dp"
+                    android:hint="№ дома"
+                    android:textColorHint="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/oblast_propiska">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/number_dom_propiskaET"
+                        android:layout_width="121dp"
+                        android:layout_height="48dp"
+                        android:inputType="number|text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/number_korpus_propiskaLayout"
+                    android:layout_width="121dp"
+                    android:layout_height="48dp"
+                    android:hint="№ корпуса"
+                    android:textColorHint="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/oblast_propiska">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/number_korpus_propiskaET"
+                        android:layout_width="121dp"
+                        android:layout_height="48dp"
+                        android:inputType="number|text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/kvartira_propiskaLayout"
+                    android:layout_width="121dp"
+                    android:layout_height="48dp"
+                    android:hint="№ кв."
+                    android:textColorHint="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/oblast_propiska">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/kvartira_propiskaET"
+                        android:layout_width="121dp"
+                        android:layout_height="48dp"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/facticheskiy_adress_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="Адрес проживания"
+                android:textSize="15sp" />
+
+        <CheckBox
+            android:id="@+id/adress_sovpadeniy"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:text="Адрес проживания совпадает с адресом прописки"
+            android:textColor="@color/black"
+            android:buttonTint="@color/azure"/>
+
+        <Spinner
+            android:layout_width="363dp"
+            android:layout_height="48dp"
+            android:id="@+id/oblast_prozhivani"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/ubuntu_light"
+            android:minHeight="45dp"
+            android:popupBackground="@color/Blue_Alice"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/gorod_prozhivaniLayout"
+            android:layout_width="363dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp"
+            android:hint="Населенный пункт"
+            android:textColorHint="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/oblast_prozhivani">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/gorod_prozhivaniET"
+                android:layout_width="363dp"
+                android:layout_height="48dp"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/strit_prozhivaniLayout"
+            android:layout_width="363dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp"
+            android:hint="Улица"
+            android:textColorHint="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/oblast_prozhivani">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/strit_prozhivaniET"
+                android:layout_width="363dp"
+                android:layout_height="48dp"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/number_prozhivani"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/number_dom_prozhivaniLayout"
+                android:layout_width="121dp"
+                android:layout_height="48dp"
+                android:hint="№ дома"
+                android:textColorHint="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/oblast_prozhivani">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/number_dom_prozhivaniET"
+                    android:layout_width="121dp"
+                    android:layout_height="48dp"
+                    android:inputType="number|text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/number_korpus_prozhivaniLayout"
+                android:layout_width="121dp"
+                android:layout_height="48dp"
+                android:hint="№ корпуса"
+                android:textColorHint="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/oblast_prozhivani">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/number_korpus_prozhivaniET"
+                    android:layout_width="121dp"
+                    android:layout_height="48dp"
+                    android:inputType="number|text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/kvartira_prozhivaniLayout"
+                android:layout_width="121dp"
+                android:layout_height="48dp"
+                android:hint="№ кв."
+                android:textColorHint="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/oblast_prozhivani">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/kvartira_prozhivaniET"
+                    android:layout_width="121dp"
+                    android:layout_height="48dp"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveBtn"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:backgroundTint="@color/azure"
+            android:fontFamily="@font/ubuntu_light"
+            android:text="Сохранить"
+            android:textColor="@color/white"
+            android:textColorHint="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+</LinearLayout>
+</ScrollView>

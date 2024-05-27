@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/menu_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:text="Меню"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/exitIv"
+        android:layout_width="35sp"
+        android:layout_height="35sp"
+        android:layout_marginTop="45dp"
+        android:clickable="true"
+        android:contentDescription="NULL"
+        android:src="@drawable/exit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/menu_title"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/podatZayavlenieBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:backgroundTint="@color/azure"
+        android:text="Подать заявление"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        app:icon="@drawable/podat_zayavlenie"
+        app:iconGravity="textStart"
+        app:iconPadding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menu_title" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/priemnaya_kompaniyaBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:backgroundTint="@color/azure"
+        android:text="Приемная компания"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        app:icon="@drawable/priemnaya_kompaniya"
+        app:iconGravity="textStart"
+        app:iconPadding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/podatZayavlenieBtn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fakultetyBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:backgroundTint="@color/azure"
+        android:text="Факультеты"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        app:icon="@drawable/fakultety"
+        app:iconGravity="textStart"
+        app:iconPadding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/priemnaya_kompaniyaBtn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/napravlenie_podgotovkiBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:backgroundTint="@color/azure"
+        android:text="Напрвления подготовки"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        app:icon="@drawable/napravleniya_podgotovki"
+        app:iconGravity="textStart"
+        app:iconPadding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fakultetyBtn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/kalkulyator_rgrBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:backgroundTint="@color/azure"
+        android:text="Калькулятор абитуриента"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        app:icon="@drawable/kalkulyator_ege"
+        app:iconGravity="textStart"
+        app:iconPadding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/napravlenie_podgotovkiBtn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/kalendar_postupleniyaBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:backgroundTint="@color/azure"
+        android:text="Календарь поступления"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        app:icon="@drawable/kalendar_postupleniya"
+        app:iconGravity="textStart"
+        app:iconPadding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/kalkulyator_rgrBtn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/voprosy_i_otvetyBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:backgroundTint="@color/azure"
+        android:text="Вопросы и ответы"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        app:icon="@drawable/yoprosy_i_otvety"
+        app:iconGravity="textStart"
+        app:iconPadding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/kalendar_postupleniyaBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

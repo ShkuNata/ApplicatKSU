@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PriemnayaKomissiaActivity">
+
+    <TextView
+        android:id="@+id/title_priemnay_komissia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40sp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:text="Приемная комапания на 2024/2025 учебный год"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/spoTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Среднее профессиональное образование"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_priemnay_komissia" />
+
+    <TextView
+        android:id="@+id/vo_bacTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Высшее образование: бакалавриат, специалитет"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spoTV" />
+
+    <TextView
+        android:id="@+id/vo_magTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Высшее образование: магистратура"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vo_bacTV" />
+
+    <TextView
+        android:id="@+id/vo_aspTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Высшее образование: подготовка кадров высшей квалификации - аспирантура"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vo_magTV" />
+
+    <TextView
+        android:id="@+id/title_inf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:text="Информация о приемной комисси"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vo_aspTV" />
+
+    <TextView
+        android:id="@+id/title_time_work_inf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:text="Режим работы:"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_inf" />
+
+    <TextView
+        android:id="@+id/time_work_inf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50sp"
+        android:layout_marginEnd="50sp"
+        android:text="понельник - пятница: с 9:00 до 17:00\nсуббота - воскресенье: выходной день"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_time_work_inf" />
+
+    <TextView
+        android:id="@+id/adres_inf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:text="Адрес: "
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/time_work_inf" />
+
+
+    <TextView
+        android:id="@+id/adres_map_inf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:clickable="true"
+        android:text="г. Курск, ул. Радищева, 33, 1-й этаж, ауд.37"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/adres_inf"
+        app:layout_constraintTop_toBottomOf="@id/time_work_inf" />
+
+    <TextView
+        android:id="@+id/phone_inf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:text="Телефон: +7 (4712) 52-09-04"
+        android:textIsSelectable="true"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/adres_map_inf" />
+
+    <TextView
+        android:id="@+id/email_inf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:text="e-mail: pk@kursksu.ru"
+        android:textIsSelectable="true"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone_inf" />
+
+    <TextView
+        android:id="@+id/title_inost_inf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:text="по вопросам приема иностранных граждан\n - в управление международных связей:"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email_inf" />
+
+    <LinearLayout
+        android:id="@+id/title_adres_map_inost_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_inost_inf">
+
+        <TextView
+            android:id="@+id/adres_inost_inf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5sp"
+            android:text="Адрес: "
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/adres_map_inost_inf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="г. Курск, ул. Радищева, 29, 8-й этаж, каб. 804"
+            android:textSize="15sp"
+            android:textColor="@color/azure"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/phone_inost_inf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:text="Телефон: +7 (4712) 51-04-69"
+        android:textIsSelectable="true"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_adres_map_inost_text" />
+
+    <TextView
+        android:id="@+id/email_inost_inf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:text="e-mail: irsp@kursksu.ru"
+        android:textIsSelectable="true"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone_inost_inf" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

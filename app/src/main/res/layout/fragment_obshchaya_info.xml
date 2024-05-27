@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Blue_Alice"
+    tools:context=".zayavlenie.Obshchaya_infoFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/surnameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="40sp"
+        android:hint="Фамилия"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/surnameET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginEnd="40sp"
+        android:hint="Имя"
+        android:textColorHint="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/surnameLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/otchestvoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginEnd="40sp"
+        android:hint="Отчество"
+        android:textColorHint="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/nameLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/otchestvoET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/berthdayLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginEnd="40sp"
+        android:hint="Дата рождения"
+        android:textColorHint="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/otchestvoLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/berthdayET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/genderLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:orientation="horizontal"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/berthdayLayout">
+
+        <TextView
+            android:id="@+id/pol_title"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/ubuntu_light"
+            android:gravity="center_vertical"
+            android:minHeight="48dp"
+            android:text="Пол:"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="52dp"
+            tools:layout_editor_absoluteY="345dp" />
+
+        <RadioGroup
+            android:id="@+id/genderRadioGroup"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/MRadioButton"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_light"
+                android:minHeight="48dp"
+                android:text="М"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/WRadioButton"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_light"
+                android:minHeight="48dp"
+                android:text="Ж"
+                android:textColor="@color/black" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/berthplaceLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginEnd="40sp"
+        android:hint="Место рождения"
+        android:textColorHint="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/genderLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/berthplaceET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/soglas_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Даю согласие на обработку персональных данных"
+        app:layout_constraintBottom_toTopOf="@+id/saveBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/berthplaceLayout"
+        android:textColor="@color/black"
+        android:buttonTint="@color/azure"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveBtn"
+        android:layout_width="285dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="40sp"
+        android:layout_marginEnd="40sp"
+        android:backgroundTint="@color/azure"
+        android:fontFamily="@font/ubuntu_light"
+        android:text="Сохранить"
+        android:textColor="@color/white"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

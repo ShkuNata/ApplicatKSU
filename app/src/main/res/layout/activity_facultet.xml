@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:id="@+id/facultet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/Blue_Alice"
+    android:orientation="vertical"
+    tools:context=".FacultetActivity">
+
+    <TextView
+        android:id="@+id/title_facultet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40sp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:gravity="center"
+        android:text="Факультеты"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/defektologicheskijTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Дефектологический факультет"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_facultet" />
+
+    <TextView
+        android:id="@+id/estestvenno_geograficheskijTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Естественно-географический факультет"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/defektologicheskijTV" />
+
+    <TextView
+        android:id="@+id/industrialno_pedagogicheskijTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Индустриально-педагогический факультет"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/estestvenno_geograficheskijTV" />
+
+    <TextView
+        android:id="@+id/inostrannyh_yazykovTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Факультет иностранных языков"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/industrialno_pedagogicheskijTV" />
+
+    <TextView
+        android:id="@+id/institut_ekonomiki_i_upravleniyaTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Институт экономики и управления"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inostrannyh_yazykovTV" />
+
+    <TextView
+        android:id="@+id/iskusstv_i_art_pedagogikiTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Факультет искусств и арт-педагогики"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/institut_ekonomiki_i_upravleniyaTV" />
+
+    <TextView
+        android:id="@+id/istoricheskijTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Исторический факультет"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iskusstv_i_art_pedagogikiTV" />
+
+    <TextView
+        android:id="@+id/pedagogiki_i_psihologiiTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Факультет педагогики и психологии"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/istoricheskijTV" />
+
+    <TextView
+        android:id="@+id/aspiranturaTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Факультет повышения квалификации и профессиональной переподготовки кадров"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pedagogiki_i_psihologiiTV" />
+
+    <TextView
+        android:id="@+id/teologii_i_religiovedeniyaTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Факультет теологии и религиоведения"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aspiranturaTV" />
+
+    <TextView
+        android:id="@+id/fiziki_matematiki_informatikiTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Факультет физики, математики, информатики"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/teologii_i_religiovedeniyaTV" />
+
+    <TextView
+        android:id="@+id/fizicheskoj_kultury_i_sportaTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Факультет физической культуры и спорта"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fiziki_matematiki_informatikiTV" />
+
+    <TextView
+        android:id="@+id/filologicheskijTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Филологический факультет"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fizicheskoj_kultury_i_sportaTV" />
+
+    <TextView
+        android:id="@+id/filosofii_i_sociologiiTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Факультет философии и социологии"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filologicheskijTV" />
+
+    <TextView
+        android:id="@+id/hudozhestvenno_graficheskijTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Художественно-графический факультет"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filosofii_i_sociologiiTV" />
+
+    <TextView
+        android:id="@+id/yuridicheskijTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Юридический факультет"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hudozhestvenno_graficheskijTV" />
+
+    <TextView
+        android:id="@+id/title_obshcheuniversitetskie_kafedry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40sp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:gravity="center"
+        android:text="Общеуниверситетские кафедры"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/yuridicheskijTV" />
+
+    <TextView
+        android:id="@+id/kafedra_inostrannyh_yazykov_i_professionalnoj_kommunikaciiTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Кафедра иностранных языков и профессиональной коммуникации"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_obshcheuniversitetskie_kafedry" />
+
+    <TextView
+        android:id="@+id/kafedra_pedagogiki_i_professionalnogo_obrazovaniyaTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Кафедра педагогики и профессионального образования"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/kafedra_inostrannyh_yazykov_i_professionalnoj_kommunikaciiTV" />
+
+    <TextView
+        android:id="@+id/kafedra_psihologiiTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Кафедра психологии"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/kafedra_pedagogiki_i_professionalnogo_obrazovaniyaTV" />
+
+    <TextView
+        android:id="@+id/kafedra_russkogo_yazyka_dlya_inostrannyh_grazhdanTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Кафедра русского языка для иностранных граждан"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/kafedra_psihologiiTV" />
+
+    <TextView
+        android:id="@+id/kafedra_socialnoj_rabotyTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Кафедра социальной работы"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/kafedra_russkogo_yazyka_dlya_inostrannyh_grazhdanTV" />
+
+    <TextView
+        android:id="@+id/title_obrazovatelnye_podrazdeleniya"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40sp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:gravity="center"
+        android:text="Образовательные подразделения"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/kafedra_socialnoj_rabotyTV" />
+
+    <TextView
+        android:id="@+id/kolledzh_kommercii_tekhnologij_i_servisa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40sp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:text="Колледж коммерции, технологий и сервиса"
+        android:textSize="15sp"
+        android:textColor="@color/azure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_obrazovatelnye_podrazdeleniya" />
+
+
+
+</LinearLayout>
+</ScrollView>
