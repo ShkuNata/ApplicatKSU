@@ -31,10 +31,8 @@ public class MyViewPagerAdapter extends FragmentStateAdapter {
             case 3:
                 return new Napravlenie_podgotovkiFragment();
             case 4:
-                return new EkzamenFragment();
-            case 5:
                 return new DostizheniyFragment();
-            case 6:
+            case 5:
                 return new DokumentsFragment();
             default:
                 return new Obshchaya_infoFragment();
@@ -44,6 +42,6 @@ public class MyViewPagerAdapter extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 7;
+        return 6;
     }
 }

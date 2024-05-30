@@ -60,6 +60,7 @@ public class LoginActivity extends AppCompatActivity {
                                 FirebaseUser currentUser = mAuth.getCurrentUser();
                                 if(currentUser != null){
                                     String userId = currentUser.getUid();
+
                                     databaseReference.child("Users").child(userId).child("role").addListenerForSingleValueEvent(new ValueEventListener() {
                                         @Override
                                         public void onDataChange(@NonNull DataSnapshot snapshot) {
