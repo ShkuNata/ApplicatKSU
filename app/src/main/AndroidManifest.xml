@@ -15,6 +15,9 @@
         android:theme="@style/Theme.ApplicatKSU"
         tools:targetApi="31">
         <activity
+            android:name=".zayavlenie.dokuments.AddDocumentsActivity"
+            android:exported="false" />
+        <activity
             android:name=".WebActivity"
             android:exported="false" />
         <activity

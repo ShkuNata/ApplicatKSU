@@ -33,7 +33,7 @@ public class ObrazovanieFragment extends Fragment {
 
     Spinner urovenObrazovania;
     String uroven_obrazovania="";
-    TextInputEditText numberObrazovania, seriyObrazovania, nameObrazovania, dateVidachi, sradniyBall;
+    TextInputEditText numberObrazovania, seriyObrazovania, nameObrazovania, dateVidachi, sradniyBall, language;
     MaterialButton saveZayavlenie;
 
     public void onViewCreated(View view, Bundle savedInstanceState){
@@ -48,6 +48,7 @@ public class ObrazovanieFragment extends Fragment {
     nameObrazovania = view.findViewById(R.id.name_obrazovaniaET);
     dateVidachi = view.findViewById(R.id.date_vidachiET);
     sradniyBall = view.findViewById(R.id.sredniy_ballET);
+    language = view.findViewById(R.id.languageET);
 
     saveZayavlenie = view.findViewById(R.id.saveBtn);
 
@@ -82,6 +83,7 @@ public class ObrazovanieFragment extends Fragment {
                 zayavlenie.put("nameObrazovania", nameObrazovania.getText().toString());
                 zayavlenie.put("dateVidachi", dateVidachi.getText().toString());
                 zayavlenie.put("sradniyBall", sradniyBall.getText().toString());
+                zayavlenie.put("language", language.getText().toString());
 
 
                 mDatabase.child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("Zayavlenie").updateChildren(zayavlenie).

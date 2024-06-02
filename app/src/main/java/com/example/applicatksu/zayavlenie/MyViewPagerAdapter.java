@@ -5,13 +5,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.applicatksu.zayavlenie.DokumentsFragment;
-import com.example.applicatksu.zayavlenie.DostizheniyFragment;
-import com.example.applicatksu.zayavlenie.EkzamenFragment;
-import com.example.applicatksu.zayavlenie.Napravlenie_podgotovkiFragment;
-import com.example.applicatksu.zayavlenie.ObrazovanieFragment;
-import com.example.applicatksu.zayavlenie.Obshchaya_infoFragment;
-import com.example.applicatksu.zayavlenie.Personal_infoFragment;
+import com.example.applicatksu.zayavlenie.dokuments.DokumentsFragment;
 
 public class MyViewPagerAdapter extends FragmentStateAdapter {
     public MyViewPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
@@ -31,8 +25,6 @@ public class MyViewPagerAdapter extends FragmentStateAdapter {
             case 3:
                 return new Napravlenie_podgotovkiFragment();
             case 4:
-                return new DostizheniyFragment();
-            case 5:
                 return new DokumentsFragment();
             default:
                 return new Obshchaya_infoFragment();
@@ -42,6 +34,6 @@ public class MyViewPagerAdapter extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 6;
+        return 5;
     }
 }
