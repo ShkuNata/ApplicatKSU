@@ -6,8 +6,10 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.text.SpannableString;
@@ -17,22 +19,23 @@ import com.google.android.material.tabs.TabLayout;
 import java.util.ArrayList;
 
 import com.example.applicatksu.databinding.ActivityZayavlenieBinding;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 public class ZayavlenieActivity extends AppCompatActivity {
-
-    TabLayout tabLayout;
-    ViewPager2 viewPager2;
-    MyViewPagerAdapter myViewPagerAdapter;
-
+    private TabLayout tabLayout;
+    private ViewPager2 viewPager2;
     private ActivityZayavlenieBinding binding;
+    private MyViewPagerAdapter myViewPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        binding = ActivityZayavlenieBinding.inflate(getLayoutInflater());
         setContentView(R.layout.activity_zayavlenie);
 
         tabLayout=findViewById(R.id.main_zayavlenie_layuot);
-        viewPager2=findViewById(R.id.viewpager);
+        viewPager2 = findViewById(R.id.viewpager);
+
         myViewPagerAdapter = new MyViewPagerAdapter(this);
         viewPager2.setAdapter(myViewPagerAdapter);
 
@@ -41,18 +44,12 @@ public class ZayavlenieActivity extends AppCompatActivity {
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager2.setCurrentItem(tab.getPosition());
             }
-
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-
             }
-
             @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
+            public void onTabReselected(TabLayout.Tab tab) {}
         });
-
         viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageSelected(int position) {
@@ -62,11 +59,10 @@ public class ZayavlenieActivity extends AppCompatActivity {
         });
     }
 
-
     private class MainAdapter extends FragmentPagerAdapter {
         // Initialize arrayList
-        ArrayList<Fragment> fragmentArrayList= new ArrayList<>();
-        ArrayList<String> stringArrayList=new ArrayList<>();
+        private ArrayList<Fragment> fragmentArrayList= new ArrayList<>();
+        private ArrayList<String> stringArrayList=new ArrayList<>();
 
         // Create constructor
         public void addFragment(Fragment fragment,String s)
@@ -106,3 +102,4 @@ public class ZayavlenieActivity extends AppCompatActivity {
         }
     }
 }
+

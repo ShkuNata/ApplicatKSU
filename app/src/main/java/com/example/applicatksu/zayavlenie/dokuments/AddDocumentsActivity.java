@@ -87,6 +87,7 @@ public class AddDocumentsActivity extends AppCompatActivity {
                 if(imageUri != null){
                     String caption = uploadCaption.getText().toString();
                     StorageReference imageReference = storageReference.child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child(uploadCaption.getText().toString());
+                    progressBar.setVisibility(View.VISIBLE);
                     imageReference.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
@@ -94,11 +95,16 @@ public class AddDocumentsActivity extends AppCompatActivity {
                                 @Override
                                 public void onSuccess(Uri uri) {
                                     DataClass dataClass = new DataClass(uri.toString(), caption);
-                                    databaseReference.child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("Zayavlenie").child("doc").child(caption).setValue(dataClass);
-                                    progressBar.setVisibility(View.INVISIBLE);
-                                    Toast.makeText(AddDocumentsActivity.this, "Изображение загружено!", Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(AddDocumentsActivity.this, DokumentsFragment.class));
-                                    finish();
+                                    databaseReference.child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("Zayavlenie").child("doc").child(caption).setValue(dataClass)
+                                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                @Override
+                                                public void onSuccess(Void unused) {
+                                                    progressBar.setVisibility(View.INVISIBLE);
+                                                    Toast.makeText(AddDocumentsActivity.this, "Изображение загружено!", Toast.LENGTH_SHORT).show();
+                                                    startActivity(new Intent(AddDocumentsActivity.this, DokumentsFragment.class));
+                                                    finish();
+                                                }
+                                            });
                                 }
                             });
                         }

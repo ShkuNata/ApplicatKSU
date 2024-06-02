@@ -11,7 +11,6 @@ public class MyViewPagerAdapter extends FragmentStateAdapter {
     public MyViewPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);
     }
-
     @NonNull
     @Override
     public Fragment createFragment(int position) {
@@ -31,9 +30,9 @@ public class MyViewPagerAdapter extends FragmentStateAdapter {
 
         }
     }
-
     @Override
     public int getItemCount() {
         return 5;
     }
+
 }
