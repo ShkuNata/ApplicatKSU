@@ -7,6 +7,8 @@ import androidx.activity.result.contract.ActivityResultContract;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.app.Activity;
 import android.content.ContentResolver;
@@ -20,6 +22,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.applicatksu.R;
+import com.example.applicatksu.ZayavlenieActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -55,7 +58,6 @@ public class AddDocumentsActivity extends AppCompatActivity {
         databaseReference = FirebaseDatabase.getInstance().getReference();
         storageReference = FirebaseStorage.getInstance().getReference();
 
-
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 new ActivityResultCallback<ActivityResult>() {
@@ -84,48 +86,57 @@ public class AddDocumentsActivity extends AppCompatActivity {
         uploadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(imageUri != null){
-                    String caption = uploadCaption.getText().toString();
-                    StorageReference imageReference = storageReference.child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child(uploadCaption.getText().toString());
-                    progressBar.setVisibility(View.VISIBLE);
-                    imageReference.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            imageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                                @Override
-                                public void onSuccess(Uri uri) {
-                                    DataClass dataClass = new DataClass(uri.toString(), caption);
-                                    databaseReference.child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("Zayavlenie").child("doc").child(caption).setValue(dataClass)
-                                            .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                                @Override
-                                                public void onSuccess(Void unused) {
-                                                    progressBar.setVisibility(View.INVISIBLE);
-                                                    Toast.makeText(AddDocumentsActivity.this, "Изображение загружено!", Toast.LENGTH_SHORT).show();
-                                                    startActivity(new Intent(AddDocumentsActivity.this, DokumentsFragment.class));
-                                                    finish();
-                                                }
-                                            });
-                                }
-                            });
-                        }
-                    }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
-                            progressBar.setVisibility(View.VISIBLE);
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            progressBar.setVisibility(View.INVISIBLE);
-                            Toast.makeText(AddDocumentsActivity.this, "Неудалось загрузить!", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-
+                String caption = uploadCaption.getText().toString();
+                if(imageUri != null && !caption.isEmpty()){
+                    uploadImageToFirebase(caption, imageUri);
                 }else{
-                    Toast.makeText(AddDocumentsActivity.this, "Пожалуйста, выберете изображение!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddDocumentsActivity.this, "Пожалуйста, введите название и выберете изображение!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
 
+    private void uploadImageToFirebase(String caption, Uri imageUri) {
+        progressBar.setVisibility(View.VISIBLE);
+        StorageReference imageReference = storageReference.child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child(caption);
+
+        imageReference.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                imageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+                        saveDocumentInfoToDatabase(caption, uri);
+                    }
+                });
+            }
+        }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
+                // Обновление прогресса загрузки
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                progressBar.setVisibility(View.INVISIBLE);
+                Toast.makeText(AddDocumentsActivity.this, "Неудалось загрузить!", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void saveDocumentInfoToDatabase(String caption, Uri downloadUri) {
+        DataClass dataClass = new DataClass(downloadUri.toString(), caption);
+        databaseReference.child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("Zayavlenie").child("doc").child(caption).setValue(dataClass)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        progressBar.setVisibility(View.INVISIBLE);
+                        Toast.makeText(AddDocumentsActivity.this, "Изображение загружено!", Toast.LENGTH_SHORT).show();
+                        Intent returnIntent = new Intent();
+                        returnIntent.putExtra("photo", dataClass);
+                        setResult(Activity.RESULT_OK, returnIntent);
+                        finish();
+                    }
+                });
+    }
 }

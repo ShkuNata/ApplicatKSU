@@ -27,10 +27,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ObrazovanieFragment extends Fragment {
-
     public ObrazovanieFragment() {super(R.layout.fragment_obrazovanie);}
     private DatabaseReference mDatabase;
-
     Spinner urovenObrazovania;
     String uroven_obrazovania="";
     TextInputEditText numberObrazovania, seriyObrazovania, nameObrazovania, dateVidachi, sradniyBall, language;
