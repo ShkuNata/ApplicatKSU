@@ -1,4 +1,4 @@
-package com.example.applicatksu.zayavlenie;
+package com.example.applicatksu.zayavlenie.naprav_podgotovki;
 
 import android.os.Bundle;
 

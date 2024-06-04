@@ -61,6 +61,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/name_doc_ET"
+                android:textColor="@color/black"
                 android:layout_width="270dp"
                 android:layout_height="48dp"
                 android:inputType="text"/>

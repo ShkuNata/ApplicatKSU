@@ -24,6 +24,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/surnameET"
+            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textCapSentences" />
@@ -42,6 +43,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/nameET"
             android:layout_width="match_parent"
+            android:textColor="@color/black"
             android:layout_height="wrap_content"
             android:inputType="textCapSentences" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -60,6 +62,7 @@
             android:id="@+id/otchestvoET"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:inputType="textCapSentences" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -77,6 +80,7 @@
             android:id="@+id/berthdayET"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:inputType="date" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -143,6 +147,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/berthplaceET"
+            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

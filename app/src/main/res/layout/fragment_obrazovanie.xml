@@ -48,6 +48,7 @@
                 android:id="@+id/nubmer_obrazovaniaET"
                 android:layout_width="175dp"
                 android:layout_height="48dp"
+                android:textColor="@color/black"
                 android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -63,6 +64,7 @@
                 android:id="@+id/seriy_obrazovaniaET"
                 android:layout_width="175dp"
                 android:layout_height="48dp"
+                android:textColor="@color/black"
                 android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -85,6 +87,7 @@
             android:id="@+id/name_obrazovaniaET"
             android:layout_width="363dp"
             android:layout_height="48dp"
+            android:textColor="@color/black"
             android:inputType="textCapWords" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -115,6 +118,7 @@
                 android:id="@+id/date_vidachiET"
                 android:layout_width="175dp"
                 android:layout_height="48dp"
+                android:textColor="@color/black"
                 android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -130,6 +134,7 @@
                 android:id="@+id/sredniy_ballET"
                 android:layout_width="175dp"
                 android:layout_height="48dp"
+                android:textColor="@color/black"
                 android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -152,6 +157,7 @@
             android:id="@+id/languageET"
             android:layout_width="363dp"
             android:layout_height="48dp"
+            android:textColor="@color/black"
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 

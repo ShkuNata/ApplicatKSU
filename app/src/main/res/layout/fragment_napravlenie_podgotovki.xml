@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Blue_Alice"
-    tools:context=".zayavlenie.Napravlenie_podgotovkiFragment">
+    tools:context=".zayavlenie.naprav_podgotovki.Napravlenie_podgotovkiFragment">
 
     <Spinner
         android:id="@+id/uroven_obrazov"

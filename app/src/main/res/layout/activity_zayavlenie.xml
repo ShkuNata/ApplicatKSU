@@ -8,27 +8,17 @@
     android:background="@color/Blue_Alice"
     tools:context=".ZayavlenieActivity">
 
-
-    <ImageView
-        android:id="@+id/go_to_main_activity_tv"
-        android:layout_width="29dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/strelka" />
-
     <TextView
         android:id="@+id/zayavlenie_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/ubuntu_medium"
         android:text="Заявление"
         android:textSize="30sp"
-        app:layout_constraintStart_toEndOf="@+id/go_to_main_activity_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.tabs.TabLayout
