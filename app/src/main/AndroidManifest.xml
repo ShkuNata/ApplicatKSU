@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
         android:allowBackup="true"
@@ -15,10 +16,20 @@
         android:theme="@style/Theme.ApplicatKSU"
         tools:targetApi="31">
         <activity
+            android:name=".question.FAQActivity"
+            android:exported="false" />
+
+        <receiver android:name=".kalendar.ReminderBroadcast" />
+
+        <activity
+            android:name=".kalendar.KalendarActivity"
+            android:exported="false" />
+        <activity
             android:name=".zayavlenie.dokuments.AddDocumentsActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -51,6 +62,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

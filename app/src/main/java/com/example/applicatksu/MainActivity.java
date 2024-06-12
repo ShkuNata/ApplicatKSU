@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.applicatksu.kalendar.KalendarActivity;
+import com.example.applicatksu.question.FAQActivity;
 import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -73,7 +75,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        kalendar_postupleniyaBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, KalendarActivity.class));
+            }
+        });
 
+        voprosy_i_otvetyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, FAQActivity.class));
+            }
+        });
 
     }
 }

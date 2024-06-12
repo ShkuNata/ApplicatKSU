@@ -107,13 +107,15 @@
             android:text="Пол:"
             android:textSize="18sp"
             tools:layout_editor_absoluteX="52dp"
-            tools:layout_editor_absoluteY="345dp" />
+            tools:layout_editor_absoluteY="345dp"
+            />
 
         <RadioGroup
             android:id="@+id/genderRadioGroup"
             android:layout_width="230dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+           >
 
             <RadioButton
                 android:id="@+id/MRadioButton"
@@ -122,7 +124,8 @@
                 android:fontFamily="@font/ubuntu_light"
                 android:minHeight="48dp"
                 android:text="М"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:backgroundTintMode="@color/azure"/>
 
             <RadioButton
                 android:id="@+id/WRadioButton"
@@ -131,7 +134,8 @@
                 android:fontFamily="@font/ubuntu_light"
                 android:minHeight="48dp"
                 android:text="Ж"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:backgroundTintMode="@color/azure"/>
         </RadioGroup>
     </LinearLayout>
 

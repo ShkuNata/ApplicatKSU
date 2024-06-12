@@ -3,6 +3,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="azure">#0076AA</color>
+    <color name="azure_dark">#0059B2</color> <!-- Более темный оттенок Azure -->
+    <color name="azure_accent">#89CFF0</color> <!-- Светлый акцентный оттенок Azure -->
     <color name="Blue_Alice">#F2F6FC</color>
     <color name="Mother_of_pearl_light_grey">#999999</color>
 </resources>
